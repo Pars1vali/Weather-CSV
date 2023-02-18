@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Weather App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/dist/output.css" rel="stylesheet" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/src/icon.svg" type="image/svg+xml" />
+    </head>
+    <body class="h-[100vh]">
+        <header class="absolute top-[20%] right-[5%]">
+            <button
+                title="Coded by Andrey K. and Vladimir C."
+                class="rounded-full px-3 py-0"
+            >
+                i
+            </button>
+        </header>
+        <form
+            id="inputForm"
+            class="h-[100vh] flex flex-col justify-center items-center"
+        >
+            <input
+                id="city"
+                class="text-black bg-transparent dark:text-white rounded-full text-center border-2 py-2 mb-6"
+                type="text"
+                placeholder="введите город"
+            />
+            <button class="text-sm md:text-base px-3 py-2 border rounded-full">
+                Узнать погоду
+            </button>
+        </form>
+    </body>
+    <script src="logica.js"></script>
+</html>
