@@ -1,10 +1,15 @@
 {
-    "devDependencies": {
-        "@tailwindcss/forms": "^0.5.3",
-        "tailwindcss": "^3.2.7"
-    },
-    "dependencies": {
-        "@json2csv/plainjs": "^6.1.2",
-        "@types/json2csv": "^5.0.3"
-    }
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "@json2csv/plainjs": "^6.1.2",
+    "@types/json2csv": "^5.0.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2
+  }
 }
