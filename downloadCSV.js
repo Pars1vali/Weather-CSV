@@ -1,4 +1,4 @@
-import { Parser } from '@json2csv/plainjs'
+import { Parser } from './node/@json2csv/plainjs'
 
 export function downloadJSON(data) {
   let a = document.createElement('a')
@@ -21,12 +21,10 @@ export function downloadJSON(data) {
 }
 
 function downloadBlob(content, filename, contentType) {
-  // Create a blob
-  var blob = new Blob([content], { type: contentType })
-  var url = URL.createObjectURL(blob)
+  let blob = new Blob([content], { type: contentType })
+  let url = URL.createObjectURL(blob)
 
-  // Create a link to download it
-  var pom = document.createElement('a')
+  let pom = document.createElement('a')
   pom.href = url
   pom.setAttribute('download', filename)
   pom.click()

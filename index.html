@@ -26,14 +26,24 @@
       class="h-[100vh] flex flex-col justify-center items-center"
     >
       <img src="public\icon192.png" alt="Эмблема" />
+      <p id="text"></p>
       <input
         id="city"
         class="text-black bg-transparent dark:text-white rounded-full text-center border-2 py-2 mb-6"
         type="text"
         placeholder="введите город"
       />
-      <button class="text-sm md:text-base px-3 py-2 border rounded-full">
+      <button
+        class="text-sm md:text-base px-3 py-2 border rounded-full"
+        id="getWeather_Btn"
+      >
         Узнать погоду
+      </button>
+      <button
+        class="text-sm md:text-base px-3 py-2 border rounded-full"
+        id="saveCSV_Btn"
+      >
+        Сохрнаить в CSV
       </button>
     </form>
   </body>
