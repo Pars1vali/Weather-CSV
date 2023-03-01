@@ -1,4 +1,4 @@
-//import { downloadJSON } from './downloadCSV.js'
+import { downloadJSON } from './downloadCSV.js'
 
 const apiKey = 'c0f15fe47baadea92789faa12699ad53'
 
@@ -41,6 +41,6 @@ btnSearch.addEventListener('click', function (e) {
 
 btnSave.addEventListener('click', function (e) {
   e.preventDefault()
-  //downloadJSON(dataJson)
+  downloadJSON(dataJson)
   console.log('csv')
 })
