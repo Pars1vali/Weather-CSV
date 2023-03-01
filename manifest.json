@@ -3,17 +3,17 @@
   "name": "Погодное веб приложение",
   "icons": [
     {
-      "src": "/public/icon.svg",
+      "src": "/icon.svg",
       "type": "image/svg+xml",
       "sizes": "any"
     },
     {
-      "src": "/public/icon192.png",
+      "src": "/icon192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/public/icon512.png",
+      "src": "/icon512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

@@ -1,4 +1,4 @@
-import { Parser } from './node/@json2csv/plainjs'
+import { Parser } from '@json2csv/plainjs'
 
 export function downloadJSON(data) {
   let a = document.createElement('a')
