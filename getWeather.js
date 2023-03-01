@@ -1,4 +1,4 @@
-import { downloadJSON } from './downloadCSV.js'
+import { parseCSV, downloadCSV } from './downloadCSV.js'
 
 const apiKey = 'c0f15fe47baadea92789faa12699ad53'
 
@@ -24,16 +24,13 @@ btnSearch.addEventListener('click', function (e) {
       .then(function (data) {
         console.log(data)
         dataJson = data
-        // console.log(data['weather']['0']['description'])
-        // console.log(data['main']['temp'])
-        // console.log(data['wind']['speed'])
         document.getElementById('text').innerHTML =
           data['weather']['0']['description'] +
           '  ' +
-          data['main']['temp'] +
+          Math.round(data['main']['temp']) +
           '°C ' +
           '  ' +
-          data['wind']['speed'] +
+          Math.round(data['wind']['speed']) +
           ' м/с'
       })
   }
@@ -41,6 +38,6 @@ btnSearch.addEventListener('click', function (e) {
 
 btnSave.addEventListener('click', function (e) {
   e.preventDefault()
-  downloadJSON(dataJson)
-  console.log('csv')
+  const csv = parseCSV(dataJson)
+  downloadCSV(csv, `${dataJson.name}.csv`)
 })
