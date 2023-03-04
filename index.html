@@ -25,8 +25,11 @@
       id="inputForm"
       class="h-[100vh] flex flex-col justify-center items-center"
     >
-      <img src="/icon192.png" alt="Эмблема" />
-      <p id="text"></p>
+      <span id="weather_state_icon" class="text-[13vh] mb-6">🌦️</span>
+      <span
+        class="text:base md:text-lg font-bold mb-2"
+        id="weather_state_text"
+      ></span>
       <input
         id="city"
         class="text-black bg-transparent dark:text-white rounded-full text-center border-2 py-2 mb-6"
@@ -34,7 +37,7 @@
         placeholder="введите город"
       />
       <button
-        class="text-sm md:text-base px-3 py-2 border rounded-full"
+        class="text-sm md:text-base px-3 py-2 border rounded-full mb-1"
         id="getWeather_Btn"
       >
         Узнать погоду
@@ -47,5 +50,5 @@
       </button>
     </form>
   </body>
-  <script src="getWeather.js" type="module"></script>
+  <script src="main.js" type="module"></script>
 </html>
