@@ -12,7 +12,7 @@ btnSearch.addEventListener('click', function (e) {
 
   const city = document.getElementById('city').value
   if (city) {
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`
 
     fetch(url, {
       method: 'GET',
