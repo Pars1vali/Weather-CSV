@@ -65,6 +65,9 @@ btnSearch.addEventListener('click', function (e) {
             break
         }
       })
+      .catch(function (err) {
+        alert('Произошла ошибка')
+      })
   }
 })
 
