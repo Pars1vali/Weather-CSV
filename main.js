@@ -7,6 +7,7 @@ const btnSave = document.getElementById('saveCSV_Btn')
 btnSave.hidden = true
 
 const apiKey = 'c0f15fe47baadea92789faa12699ad53'
+// обрабатываем клик по кнопке поиска
 btnSearch.addEventListener('click', function (e) {
   e.preventDefault()
 
@@ -28,6 +29,7 @@ btnSearch.addEventListener('click', function (e) {
         const weatherIcon = document.getElementById('weather_state_icon')
         const weatherDesc = data['weather']['0']['description']
 
+        // проявляем на экране температуру и скорость ветра
         weatherState.innerHTML =
           weatherDesc[0].toUpperCase() +
           weatherDesc.slice(1) +
@@ -38,6 +40,7 @@ btnSearch.addEventListener('click', function (e) {
           Math.round(data['wind']['speed']) +
           ' м/с'
 
+        // получаем тип погоды и меняем эмодзи на экране для лучшего восприятия
         let id = dataJson['weather'][0]['id']
         switch (true) {
           case /\b2\d\d/.test(id): // молнии
@@ -56,7 +59,7 @@ btnSearch.addEventListener('click', function (e) {
             weatherIcon.innerText = '💨'
             break
           case id == 800:
-            weatherIcon.innerText = '☀️'
+            weatherIcon.innerText = '☀️' // ясно
             break
           case /\b80\d/.test(id):
             weatherIcon.innerText = '☁️'
@@ -66,11 +69,13 @@ btnSearch.addEventListener('click', function (e) {
         }
       })
       .catch(function (err) {
+        // ловим ошибки
         alert('Произошла ошибка')
       })
   }
 })
 
+// обрабатываем клик по кнопке сохранения
 btnSave.addEventListener('click', function (e) {
   e.preventDefault()
 
